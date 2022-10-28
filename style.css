@@ -1,0 +1,107 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700"); */
+body {
+  text-align: center;
+  background-color: rgb(241, 243, 222);
+  font-family: "Open Sans";
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(66, 95, 87);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(116, 159, 130);
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.lewagon{
+  background-color: rgb(116, 159, 130);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+div {
+  display: block;
+}
+
+.container {
+  margin: 40px auto;
+  width: 700px;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+.card-intro {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.card-follow {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline i {
+  font-size: 50px;
+  color: rgb(116, 159, 130);
+}
+
+.fa-brands:hover {
+  color:rgb(168, 232, 144);
+}
