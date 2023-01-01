@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PagescrollController from "./pagescroll_controller"
+application.register("pagescroll", PagescrollController)
