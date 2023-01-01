@@ -1,1 +1,38 @@
 // Specific CSS for your home-page
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;}
+
+#all-div {
+    width:100%;
+    height:100%;
+    position:absolute;
+    font-size:25px;
+    font-weight:bold;
+    font-family:verdana}
+
+#ABOUT {
+    background:#FF9A3C;
+    color: #155263;
+    height:100%;
+    padding-top:100px}
+
+#PROJECTS {
+    background:#155263;
+    height:100%;
+    padding-top:100px}
+
+#EXPERIMENTS {
+    background:#FF6F3C;
+    height:100%;
+    padding-top:100px}
+
+#CONNECT {
+    background: #FFC93C;
+    height:100%;
+    padding-top:100px}
