@@ -1,4 +1,4 @@
-
+// navigation bar
 .navcustom {
   width: 100%;
   position: fixed;
@@ -56,6 +56,7 @@
   text-decoration: none;
   transition: opacity .3s;
 }
+
 .scroll a:hover {
   opacity: .5;
 }
@@ -63,6 +64,7 @@
 #scrollbutton a {
   padding-top: 60px;
 }
+
 #scrollbutton a span {
   position: absolute;
   top: 0;
@@ -70,10 +72,11 @@
   width: 46px;
   height: 46px;
   margin-left: -23px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 100%;
   box-sizing: border-box;
 }
+
 #scrollbutton a span::after {
   position: absolute;
   top: 50%;
@@ -88,6 +91,7 @@
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
 #scrollbutton a span::before {
   position: absolute;
   top: 0;
@@ -103,6 +107,7 @@
   animation: sdb03 3s infinite;
   box-sizing: border-box;
 }
+
 @-webkit-keyframes sdb03 {
   0% {
     opacity: 0;
@@ -118,6 +123,7 @@
     opacity: 0;
   }
 }
+
 @keyframes sdb03 {
   0% {
     opacity: 0;

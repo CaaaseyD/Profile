@@ -1,0 +1,144 @@
+.contact-social-icons p {
+    color: #155263; }
+
+.contact-social-icons ul a {
+    color: #155263;
+    list-style: none; }
+
+.contact-social-icons ul a:hover {
+    color: #f0f0e6; }
+
+.contact-social-icons ul a li {
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%; }
+
+
+// contact me email button
+    $bg: #f3f8fa;
+    $white: #fff;
+    $blue: #155263;
+    ;
+
+    @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+      transition: $property $duration $ease;
+    }
+
+
+    .emailbutton {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      &.emailbutton {
+        width: 23rem;
+        height: auto;
+        .emailcircle {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $blue;
+          border-radius: 1.625rem;
+          .emailicon {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: $white;
+            &.emailarrow {
+              @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: '';
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .emailbutton-text {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.5rem 0;
+          margin: 0 0 0 3.4rem;
+          color: $blue;
+          font-weight: 300;
+          line-height: 1.2;
+          text-align: center;
+        }
+      }
+      &:hover {
+        .emailcircle {
+          width: 100%;
+          .emailicon {
+            &.emailarrow {
+            background: $white;
+            transform: translate(1rem, 0);
+            }
+          }
+        }
+        .emailbutton-text {
+          color: $white;
+        }
+      }
+    }
+
+// click to copy
+.tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: $blue;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 30%;
+  left: -5%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.emailbutton .tooltiptext::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-left: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent $blue;
+}
+
+
+.emailbutton:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.8;
+}

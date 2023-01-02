@@ -13,10 +13,10 @@
     <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body data-controller="pagescroll">
-    <nav class="navbar sticky-top navcustom" data-pagescroll-target="links">
+  <body>
+    <nav class="navbar sticky-top navcustom">
       <div class="container-fluid mx-5">
-        <a class="navbar-brand mt-1" href="#">
+        <a class="navbar-brand mt-1" href="<%= root_path %>">
           <img src="<%= image_path('cd-high-resolution-logo-white-on-transparent-background.png') %>" alt="CD" width="60" class="d-inline-block">
         </a>
         <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,43 +24,16 @@
         </button> %>
         <%# <div class="collapse" id="navbarContent"> %>
           <ul>
-            <li><a href="#ABOUT">ABOUT</a></li>
-            <li><a href="#PROJECTS">PROJECTS</a></li>
-            <li><a href="#EXPERIMENTS">EXPERIMENTS</a></li>
-            <li><a href="#CONNECT">CONNECT</a></li>
+            <li><a href="<%= root_path %>#ABOUT">ABOUT</a></li>
+            <li><a href="<%= root_path %>#PROJECTS">PROJECTS</a></li>
+            <li><a href="<%= root_path %>#EXPERIMENTS">EXPERIMENTS</a></li>
+            <li><a href="<%= root_path %>#CONNECT">CONNECT</a></li>
           </ul>
         <%# </div> %>
       </div>
     </nav>
+    <%= yield %>
 
-    <div id="all-div" data-pagescroll-target="divs">
-      <%# this is about my passion and current experience %>
-      <div id="ABOUT">
-        <div class="mt-5 m-auto w-75 text-left">
-          Hello, my name is Casey
-        </div>
-        <div>
-          <p class="mt-1 m-auto w-75">
-            I am a Software Developer / Fullstack Engineer based in AU.<br>
-            Currently I'm working on xxxx.
-          </p>
-        </div>
-
-        <section id="scrollbutton" class="scroll">
-          <a href="#PROJECTS"><span></span>Scroll</a>
-        </section>
-
-      </div>
-
-      <div id="PROJECTS">
-        <div class="text-center">PROJECTS</div>
-      </div>
-
-      <div id="EXPERIMENTS">EXPERIMENTS</div>
-
-      <div id="CONNECT">CONNECT</div>
-
-    </div>
 
   </body>
 </html>

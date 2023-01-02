@@ -1,0 +1,104 @@
+/* CSS classes you can use on your table td to display the relevant tile */
+td.unopened {
+  background: image_url("unopened.svg");
+  cursor: pointer;
+}
+td.opened {
+  background: image_url('opened.svg');
+}
+td.flagged {
+  background: image_url('flag.svg');
+}
+td.question {
+  background: image_url('question.svg');
+}
+td.mine {
+  background: image_url('mine.png');
+}
+td.mine-neighbour-1 {
+  background: image_url('1.svg');
+}
+td.mine-neighbour-2 {
+  background: image_url('2.svg');
+}
+td.mine-neighbour-3 {
+  background: image_url('3.svg');
+}
+td.mine-neighbour-4 {
+  background: image_url('4.svg');
+}
+td.mine-neighbour-5 {
+  background: image_url('5.svg');
+}
+td.mine-neighbour-6 {
+  background: image_url('6.svg');
+}
+td.mine-neighbour-7 {
+  background: image_url('7.svg');
+}
+td.mine-neighbour-8 {
+  background: image_url('8.svg');
+}
+
+/* Positioning the Minesweep table and make sure the cells are square */
+table #minesweeper {
+  margin: auto;
+  margin-top: 3em;
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+table #minesweeper td {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.title-head{
+  display: flex;
+  margin: auto;
+  width: 300px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FF9A3C;
+}
+
+#buttons {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+.btn {
+  width: 100px;
+  padding: 10px 15px;
+  margin: 0px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.5s;
+  color: white;
+  font-weight: 500;
+}
+
+
+#start {
+  background-color: #009779;
+}
+#reset {
+  background-color: #c91400;
+}
+
+.disabled {
+  pointer-events: none;
+}
