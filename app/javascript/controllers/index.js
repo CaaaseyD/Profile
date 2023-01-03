@@ -15,3 +15,6 @@ application.register("minesweeper", MinesweeperController)
 
 import PagescrollController from "./pagescroll_controller"
 application.register("pagescroll", PagescrollController)
+
+import SnowController from "./snow_controller"
+application.register("snow", SnowController)
