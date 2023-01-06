@@ -1,56 +1,43 @@
-    <div id="all-div">
-      <%# this is about my passion and current experience %>
-      <div id="ABOUT">
-        <div class="pt-3 mt-5 m-auto w-75 text-left">
-          Hello, my name is Casey
-        </div>
-        <div>
-          <p class="mt-3 m-auto w-75">
-            I am a Software Developer / Fullstack Engineer based in AU.<br>
-            Currently I'm working on xxxx.
-          </p>
-        </div>
-        <section id="scrollbutton" class="text-center scroll">
-          <a href="#PROJECTS"><span></span>Scroll</a>
-        </section>
-
+<div id="all-div">
+  <%# this is about my passion and current experience %>
+  <div id="ABOUT">
+    <div class="pt-3 mt-5 m-auto w-50">
+      <div class="svg-wrapper">
+        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+          <rect class="shape" height="60" width="320" />
+        </svg>
+        <div class="text">Hello,&nbspmy name is Casey</div>
       </div>
-
-      <div id="PROJECTS">
-        <div class="text-center pt-3">PROJECTS</div>
-        <div class="mt-3 m-auto w-75">
-          <%= render "pages/projects" %>
-        </div>
-      </div>
-
-      <div id="EXPERIMENTS">
-        <div class="text-center pt-3 pb-3">EXPERIMENTS</div>
-        <%= render "pages/experiments" %>
-      </div>
-
-      <div id="CONNECT" data-controller="copy" >
-        <div class="text-center pt-5">CONNECT</div>
-        <div class="text-center pt-5">
-          <p class="text-center contact-email">
-            Get in touch with me
-            <div id="connectcontainer">
-              <button class="emailbutton" data-copy-target="copybutton" data-action="click->copy#copyaction" data-action="mouseover->copy#show">
-                <span class="tooltiptext" id="myTooltip">Click to copy</span>
-                <span class="emailcircle" aria-hidden="true">
-                  <span class="emailicon emailarrow"></span>
-                </span>
-                <span class="emailbutton-text" id="myemail" value="baimaxsolution@gmail.com">baimaxsolution@gmail.com</span>
-              </button>
-            </div>
-          </p>
-          <div class="text-center contact-social-icons">
-            <p class="text-center contact-email" style="color: white;">Or find me on:</p>
-            <ul class="centered">
-              <a href="https://www.linkedin.com/in/casey-qingyun-dai/" target="_blank"><li><i class="fa-brands fa-linkedin"></i> LinkedIn</li></a>
-              <a href="https://github.com/CaaaseyD" target="_blank"><li><i class="fa-brands fa-github"></i> Github</li></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
+    <div>
+      <p class="mt-3 m-auto w-50">
+        I am a Software Developer / Fullstack Developer based in AU.<br>
+        Currently I'm looking for new opportunities.
+      </p>
+    </div>
+    <section id="scrollbutton" class="text-center scroll">
+      <a href="#PROJECTS"><span></span>Scroll</a>
+    </section>
+
+  </div>
+
+  <div id="PROJECTS">
+    <div class="text-center pt-3">PROJECTS</div>
+    <div class="mt-3 m-auto w-75">
+      <%= render "pages/projects" %>
+    </div>
+  </div>
+
+  <div id="EXPERIMENTS">
+    <div class="text-center pt-3 pb-3">EXPERIMENTS</div>
+    <div class="mt-3 m-auto w-75">
+      <%= render "pages/experiments" %>
+    </div>
+  </div>
+
+  <div id="CONNECT" data-controller="copy" >
+    <div class="text-center pt-5">CONNECT</div>
+    <%= render "pages/connect" %>
+  </div>
+
+</div>

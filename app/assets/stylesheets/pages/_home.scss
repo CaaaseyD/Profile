@@ -1,7 +1,13 @@
 // Specific CSS for your home-page
-*{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+* {
+    font-family:'Gill Sans', 'Gill Sans MT',
+    Calibri, 'Trebuchet MS', sans-serif
   }
+$color1: #0B132B;
+$color2: #1C2541;
+$color3: #3A506B;
+$color4: #5BC0BE;
+$color5: #6FFFE9;
 
 html, body {
     height: 100%;
@@ -17,22 +23,66 @@ html, body {
     font-family:verdana}
 
 #ABOUT {
-    background:#FF9A3C;
-    color: #155263;
+    background:$color1;
+    color: $color5;
     height:100%;
-    padding-top:100px}
+    padding-top:100px;
+}
 
 #PROJECTS {
-    background:#155263;
+    background:$color2;
     height:100%;
     padding-top:100px}
 
 #EXPERIMENTS {
-    background: #FFC93C;
+    background: $color3;
     height:100%;
     padding-top:100px}
 
 #CONNECT {
-    background:#FF6F3C;
+    background:$color1;
     height:100%;
     padding-top:100px}
+
+    .svg-wrapper {
+        text-align: center;
+        height: 60px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 320px;
+      }
+
+      .shape {
+        fill: transparent;
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+        stroke: $color5;
+      }
+
+      .text {
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        position: relative;
+        top: -48px;
+      }
+
+      @keyframes draw {
+        0% {
+          stroke-dasharray: 140 540;
+          stroke-dashoffset: -474;
+          stroke-width: 8px;
+        }
+        100% {
+          stroke-dasharray: 760;
+          stroke-dashoffset: 0;
+          stroke-width: 2px;
+        }
+      }
+
+      .svg-wrapper:hover .shape {
+        -webkit-animation: 0.5s draw linear forwards;
+        animation: 0.5s draw linear forwards;
+      }
