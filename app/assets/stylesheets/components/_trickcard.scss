@@ -13,7 +13,7 @@
     height: 10px;
   }
   .card-list::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #ff4e50, #f9d423);
+    background: linear-gradient(to right, #6FFFE9, #ffe96f);
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
       inset -2px -2px 2px rgba(0, 0, 0, 0.25);
@@ -29,7 +29,8 @@
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
-    background: #17141d;
+    background-size: cover;
+    background-position: center;
     box-shadow: -1rem 0 3rem #000;
     display: flex;
     flex-direction: column;
@@ -38,6 +39,11 @@
     scroll-snap-align: start;
     clear: both;
     position: relative;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+      filter 200ms linear,
+      transform 200ms linear;
   }
 
   .card:focus-within ~ .card,
@@ -53,30 +59,33 @@
     margin-left: -130px;
   }
 
-  .card-header {
-    margin-bottom: auto;
+  .card-header{
+    background: none;
+    border: none;
   }
 
   .card-header p {
     text-decoration: none;
-    font-size: 14px;
     margin: 0 0 1rem;
-    color: #7a7a8c;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
   }
 
   .card-header h2 {
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
     margin: 0.25rem 0 auto;
-    text-decoration: none;
-    color: inherit;
+    color: white;
     border: 0;
     display: inline-block;
     cursor: pointer;
+    font-weight: 700;
   }
 
   .card-header h2:hover {
-    background: linear-gradient(to right, #fc4a1a, #f7b733);
+    background: linear-gradient(to right,#6FFFE9, #ffe96f);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -85,52 +94,34 @@
 
   .card-content{
     font-size: 16px;
-    padding: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     color: white;
   }
 
-  .card-background{
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--spacing-l);
-    bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform-origin: center;
-    transform: scale(1) translateZ(0);
-    transition:
-      filter 200ms linear,
-      transform 200ms linear;
-  }
   .tags {
-    margin: 1rem 0 2rem;
-    padding: 0.5rem 0 1rem;
-    line-height: 2;
-    margin-bottom: 0;
+    position: fixed;
+    bottom: 3rem;
   }
 
   .tags span {
     font-style: normal;
     font-weight: 700;
     font-size: 0.5rem;
-    color: #7a7a8c;
+    color: white;
     text-transform: uppercase;
     font-size: 0.66rem;
-    border: 3px solid #28242f;
+    border: 3px solid white;
     border-radius: 2rem;
     padding: 0.2rem 0.85rem 0.25rem;
-    position: relative;
   }
 
   .tags span:hover {
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    background: linear-gradient(90deg, #6FFFE9, #ffe96f);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-box-decoration-break: clone;
     background-clip: text;
-    border-color: white;
+    border-color: #ffe96f;
   }

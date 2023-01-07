@@ -1,12 +1,12 @@
 .contact-social-icons p {
-    color: #155263; }
+    color: #6FFFE9; }
 
 .contact-social-icons ul a {
-    color: #155263;
+    color: #6FFFE9;
     list-style: none; }
 
 .contact-social-icons ul a:hover {
-    color: #f0f0e6; }
+    color: #ffe96f; }
 
 .contact-social-icons ul a li {
     display: inline-block;
@@ -17,8 +17,7 @@
 // contact me email button
     $bg: #f3f8fa;
     $white: #fff;
-    $blue: #155263;
-    ;
+    $blue: #6FFFE9;
 
     @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
       transition: $property $duration $ease;
@@ -140,5 +139,5 @@
 
 .emailbutton:hover .tooltiptext {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 1;
 }
