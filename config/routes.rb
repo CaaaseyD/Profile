@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "projects", to: "pages#projects"
   get "snow", to: "pages#snow"
   get "minesweeper", to: "pages#minesweeper"
+  get "task", to: "pages#task"
 end
